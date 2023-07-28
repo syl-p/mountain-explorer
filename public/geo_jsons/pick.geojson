@@ -1,0 +1,212 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-06-20T07:50:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1920149410",
+        "ele": "500",
+        "name": "Roc de l'Aigle",
+        "natural": "peak",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6290032,
+          43.1397692
+        ]
+      },
+      "id": "node/1920149410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921822278",
+        "ele": "459",
+        "name": "Roque-Blanco",
+        "natural": "peak",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4702519,
+          43.1388319
+        ]
+      },
+      "id": "node/1921822278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2461515787",
+        "name": "Pech de Rie",
+        "natural": "peak",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4611608,
+          43.1838775
+        ]
+      },
+      "id": "node/2461515787"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3163888417",
+        "ele": "590",
+        "name": "Signal d'Alaric",
+        "natural": "peak",
+        "source": "GPS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.628013,
+          43.1477833
+        ]
+      },
+      "id": "node/3163888417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3296862143",
+        "name": "Roc Gris",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6331479,
+          43.1627454
+        ]
+      },
+      "id": "node/3296862143"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4064833629",
+        "ele": "446",
+        "name": "Cayrauts",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4504433,
+          43.1400032
+        ]
+      },
+      "id": "node/4064833629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4064833649",
+        "ele": "501",
+        "name": "Cazouillo",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4671759,
+          43.1346729
+        ]
+      },
+      "id": "node/4064833649"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4594178568",
+        "ele": "343",
+        "name": "Monredoun",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5001856,
+          43.1384576
+        ]
+      },
+      "id": "node/4594178568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4596621184",
+        "name": "Airole",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4930912,
+          43.11757
+        ]
+      },
+      "id": "node/4596621184"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4676423187",
+        "ele": "468",
+        "name": "Cachoche",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5375624,
+          43.1625867
+        ]
+      },
+      "id": "node/4676423187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4676432389",
+        "name": "Miramont",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5071041,
+          43.1651134
+        ]
+      },
+      "id": "node/4676432389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9504642505",
+        "ele": "378",
+        "name": "Les Payroles",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5924623,
+          43.1537121
+        ]
+      },
+      "id": "node/9504642505"
+    }
+  ]
+}
