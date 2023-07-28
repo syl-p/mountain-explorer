@@ -40,7 +40,7 @@ export default function Experience() {
         <directionalLight position={[1, 2, 3]} intensity={1.5}/>
         <ambientLight intensity={0.5} />
 
-        {/* <Terrain /> */}
+        <Terrain />
             
         <group ref={groupRoad} rotation-y={- Math.PI / 2} rotation-z={Math.PI}>
             {

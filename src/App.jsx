@@ -2,7 +2,7 @@ import {Canvas} from "@react-three/fiber";
 import Experience from "./Experience.jsx";
 import Loader from "./components/Loader.jsx"
 import { StrictMode, Suspense } from 'react'
-import Layout from "./components/layout.jsx";
+import Layout from "./components/Layout.jsx";
 
 function App() {
 
