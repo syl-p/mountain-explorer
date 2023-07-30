@@ -9,5 +9,8 @@ export default function Layout({children}) {
             </div>
         </header>
         {children}
+        <footer className="fixed top-0 left-0 w-full z-50 text-white">
+            
+        </footer>
     </>
 }
