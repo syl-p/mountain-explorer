@@ -1,8 +1,6 @@
 import * as GeoTIFF from "geotiff";
 import { useEffect, useRef, useState } from "react";
-import GpsRelativePosition from "../Utils/GpsRelativePosition";
-import { PivotControls, Wireframe } from '@react-three/drei'
-import * as THREE from 'three'
+import GpsRelativePosition from "../utils/GpsRelativePosition";
 
 const CENTER = [2.5438099431228546, 43.15117793128316]
  
@@ -20,16 +18,10 @@ function TerrainGeo({x, y, data}) {
 
 
     return <>
-        {/* <PivotControls
-            scale={10}
-            anchor={ [ 0, 0, 0 ] }
-            depthTest={ false }
-        > */}
-            <mesh rotation-x={Math.PI/2} rotation-z={-Math.PI /2}>
-                <planeGeometry ref={geometry} args={[x, y, x-1 , y-1]} />
-                <meshPhongMaterial color="#a3a3a3" wireframe/>
-            </mesh>
-        {/* </PivotControls> */}
+        <mesh rotation-x={Math.PI/2} rotation-z={-Math.PI /2}>
+            <planeGeometry ref={geometry} args={[x, y, x-1 , y-1]} />
+            <meshPhongMaterial color="#a3a3a3" wireframe/>
+        </mesh>
     </>
 }
 
