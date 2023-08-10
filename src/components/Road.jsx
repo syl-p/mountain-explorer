@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import GpsRelativePosition from '../utils/GpsRelativePosition'
 const CENTER = [2.5438099431228546, 43.15117793128316]
 
-export default function Road({coordinates}) {
+export default function Road({coordinates, lineMaterial}) {
     if (!coordinates[0][0] || !coordinates[0][1]) return;
     if(coordinates.length < 2 ) return;
 
@@ -29,9 +29,8 @@ export default function Road({coordinates}) {
     })
 
     return <>
-        <line>
+        <line lineMaterial={lineMaterial}>
             <bufferGeometry ref={geometry}></bufferGeometry>
-            <lineBasicMaterial color="#c5c7c5"></lineBasicMaterial>
         </line>
     </>
 }

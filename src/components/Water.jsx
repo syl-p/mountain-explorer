@@ -13,9 +13,9 @@ export default function Water({coordinates}) {
     const geometry = useRef()
     useEffect(() => {
         geometry.current.computeBoundingBox()
-        // geometry.current.rotateX(Math.PI/2)
-        // geometry.current.rotateZ(Math.PI)
-        // geometry.current.rotateY(- Math.PI/2)
+        geometry.current.rotateX(Math.PI/2)
+        geometry.current.rotateZ(Math.PI)
+        geometry.current.rotateY(- Math.PI/2)
     }, [])
 
     function genShape(points, center) {
