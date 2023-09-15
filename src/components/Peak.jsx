@@ -1,14 +1,27 @@
 import { Html } from "@react-three/drei";
 import GpsRelativePosition from "../utils/GpsRelativePosition";
 import * as THREE from 'three'
+import { useContext, useMemo } from "react";
+import { DataContext } from "../DataContext";
 const CENTER = [2.5438099431228546, 43.15117793128316]
 
 export default function Peak({coordinates, properties, clickCallback}) {
+    const {state, setActive} = useContext(DataContext)
     const pointNormalized = GpsRelativePosition(coordinates, CENTER)
-    const  position = new THREE.Vector3(pointNormalized[0], properties['ele'] ? -properties['ele'] / 30 : 0, pointNormalized[1])// position.applyAxisAngle(new THREE.Vector3(1, 0, 0), Math.PI / 2); // Rotation autour de l'axe X
+    const position = new THREE.Vector3(pointNormalized[0], properties['ele'] ? -properties['ele'] / 30 : 0, pointNormalized[1])
+        // position.applyAxisAngle(new THREE.Vector3(1, 0, 0), Math.PI / 2); // Rotation autour de l'axe X
         position.applyAxisAngle(new THREE.Vector3(0, 0, 1), Math.PI); // Rotation autour de l'axe Z
         position.applyAxisAngle(new THREE.Vector3(0, 1, 0), -Math.PI / 2); // Rotation autour de l'axe Y
 
+    function cssClasses() {
+        const defaultClass = "opacity-0 group-hover:opacity-100 group-hover:z-50 transition-all duration-500 group-hover:w-auto border border-stone-700 px-2 py-1 bg-stone-800/80 absolute -top-1/2 left-10 min-w-[150px]"
+        let classActive = ""
+        if (state.active && state.active.name == properties.name) {
+            classActive = "opacity-100 z-50 w-auto"
+        }
+        return defaultClass + " " + classActive
+    }
+    
     const icon = <>
         <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 100 100" version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" stroke="#ffffff">
             <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
@@ -19,13 +32,13 @@ export default function Peak({coordinates, properties, clickCallback}) {
 
     return <>
         <Html position={[position.x, position.y, position.z]} center>
-            <div onClick={() => clickCallback(position)} className="group absolute cursor-pointer left-1/2 top-1/2 -translate-x-1/2 -translate-Y-1/2 text-white">
+            <div onClick={() => clickCallback(position, properties.name, "peaks")} className="group absolute cursor-pointer left-1/2 top-1/2 -translate-x-1/2 -translate-Y-1/2 text-white">
                 <i className="absolute -top-1/2 -left-1/2 bg-yellow-500/70 h-8 w-8 flex flex-col justify-center items-center">
                     {icon}
                 </i>
-                <div className="opacity-0 group-hover:opacity-100 group-hover:z-50 transition-all duration-500 group-hover:w-auto border border-stone-700 px-2 py-1 bg-stone-800/80 absolute -top-1/2 left-10 min-w-[150px]">
-                    <p className="text-yellow-600 font-bold">{properties['ele'] ?? '--'} M</p>
-                    <p className="uppercase text-xs">{properties['name']}</p>
+                <div className={cssClasses()}>
+                    <p className="text-yellow-600 font-bold">{properties.ele ?? '--'} M</p>
+                    <p className="uppercase text-xs">{properties.name}</p>
                 </div>
             </div>
         </Html>
